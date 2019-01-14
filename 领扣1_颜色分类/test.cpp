@@ -27,6 +27,10 @@ public:
 				++j;
 			}
 		}
+		for (int h = 0; h <= temp; ++h){
+			cout << nums[h] << " ";
+		}
+		cout << endl;
 	}
 	
 };
