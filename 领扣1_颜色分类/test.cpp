@@ -4,36 +4,36 @@
 using namespace std;
 
 
-//class Solution1 {
-//public:
-//	void swap(int& p, int& q){
-//		int cur = p;
-//		p = q;
-//		q = cur;
-//	}
-//	void sortColors(vector<int>& nums) {
-//		int i = 0;
-//		int temp = nums.size()-1;
-//		int j = 0;
-//		for (i = 0; i < temp; ++i){
-//			if (nums[i] == 0){
-//				swap(nums[j], nums[i]);
-//				++j;
-//			}
-//		}
-//		for (i = j; i < temp; ++i){
-//			if (nums[i] == 1){
-//				swap(nums[j], nums[i]);
-//				++j;
-//			}
-//		}
-//		for (int h = 0; h <= temp; ++h){
-//			cout << nums[h] << " ";
-//		}
-//		cout << endl;
-//	}
-//	
-//};
+class Solution1 {
+public:
+	void swap(int& p, int& q){
+		int cur = p;
+		p = q;
+		q = cur;
+	}
+	void sortColors(vector<int>& nums) {
+		int i = 0;
+		int temp = nums.size()-1;
+		int j = 0;
+		for (i = 0; i < temp; ++i){
+			if (nums[i] == 0){
+				swap(nums[j], nums[i]);
+				++j;
+			}
+		}
+		for (i = j; i <= temp; ++i){
+			if (nums[i] == 1){
+				swap(nums[j], nums[i]);
+				++j;
+			}
+		}
+		for (int h = 0; h <= temp; ++h){
+			cout << nums[h] << " ";
+		}
+		cout << endl;
+	}
+	
+};
 
 class Solution2 {
 public:
@@ -62,9 +62,9 @@ public:
 };
 
 int main(){
-	vector<int> array = { 0, 1, 2, 2, 1, 1, 1, 0, 0, 2 };
-	/*Solution1 s1;
-	s1.sortColors(array);*/
+	vector<int> array = { 0, 1, 2, 2, 1 };
+	Solution1 s1;
+	s1.sortColors(array);
 
 	Solution2 s2;
 	s2.sortColors(array);
